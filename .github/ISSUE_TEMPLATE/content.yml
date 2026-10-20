@@ -1,0 +1,20 @@
+name: 内容勘误或版权联系
+description: 反馈阅读版内容错误，或由权利人联系处理相关内容。
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 反馈类型
+      options:
+        - 内容勘误
+        - 网站问题
+        - 版权联系
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 说明
+      description: 请写明相关章节、页面链接和需要处理的内容。版权联系请同时说明权利依据及希望处理的方式，请勿提交身份证件等敏感信息。
+    validations:
+      required: true

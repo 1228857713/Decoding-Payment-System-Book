@@ -1,3 +1,28 @@
+# 图解支付系统 · 在线阅读版
+
+**[打开阅读网站](https://1228857713.github.io/Decoding-Payment-System-Book/)** · [全书目录](https://1228857713.github.io/Decoding-Payment-System-Book/contents) · [版权与勘误](https://1228857713.github.io/Decoding-Payment-System-Book/about)
+
+阅读内容来源于《图解支付系统设计与实现》V_0.1.0，原著作者：**隐墨星辰**。本站维护者仅将原书整理为 Markdown 并部署为网站，方便阅读；保留原图，OCR 转换仍可能存在错误，请结合原书核对。相关文字、图示与代码的权利归原作者或相应权利人所有，本站不代表已取得作者对网站发布的单独授权。
+
+如作者或其他权利人对内容有异议，请通过 [GitHub Issues](https://github.com/1228857713/Decoding-Payment-System-Book/issues/new) 联系维护者，说明相关内容及权利依据；核实后将及时删除相关内容或下架网站。
+
+## 维护阅读网站
+
+```sh
+npm ci
+npm run dev
+npm run check
+npm run build
+```
+
+站点使用 VitePress 1.6.4，内容位于 `docs/book/`。`check` 依据随内容记录的哈希验证正文和图片。若同级目录保留转换后的原书，可使用 `npm run check:source` 做源文件比对。
+
+GitHub Pages 通过仓库工作流自动部署，构建时使用 `SITE_BASE=/Decoding-Payment-System-Book/`。Cloudflare Pages 使用 `npm run build`、输出目录 `docs/.vitepress/dist`、`SITE_BASE=/`，不需要后端服务。
+
+---
+
+以下保留原仓库说明：
+
 # 百图解码支付系统设计与实现
 ## 内容概览
 根据作者10余年支付行业架构设计与实现的经验，围绕如何设计在线支付系统进行讲解。内容主要包括：专业术语解读、支付系统概述、产品和系统架构、核心业务逻辑、各核心子系统的设计，以及一些专项技术课题。

@@ -1,0 +1,38 @@
+:root {
+  --vp-c-brand-1: #287a53;
+  --vp-c-brand-2: #33885d;
+  --vp-c-brand-3: #42b883;
+  --vp-c-brand-soft: rgba(66, 184, 131, .12);
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --vp-font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --book-font-size: 18px;
+}
+.dark {
+  --vp-c-brand-1: #66d9a3;
+  --vp-c-brand-2: #56c994;
+  --vp-c-brand-3: #42b883;
+}
+.VPDoc .vp-doc { font-size: var(--book-font-size); line-height: 1.95; }
+.vp-doc p, .vp-doc li { line-height: 1.95; }
+.vp-doc h1 { line-height: 1.45; font-size: 2rem; letter-spacing: -.02em; }
+.vp-doc h2 { line-height: 1.55; }
+.vp-doc blockquote { font-size: .875em; }
+.vp-doc img { max-width: 100%; height: auto; margin: 1.5rem auto; cursor: zoom-in; background: white; border-radius: 4px; }
+.vp-doc img:focus-visible { outline: 3px solid var(--vp-c-brand-1); outline-offset: 5px; }
+.vp-doc table { display: block; max-width: 100%; overflow-x: auto; font-size: .875em; }
+.vp-doc th, .vp-doc td { min-width: 6rem; }
+.vp-doc pre { font-size: 14px; line-height: 1.65; }
+.VPSidebarItem .text { line-height: 1.6; }
+.VPHome .text { max-width: 800px; }
+.VPHome .tagline { max-width: 700px; }
+.home-meta { color: var(--vp-c-text-2); font-size: .9rem; }
+@media (min-width: 960px) {
+  .VPDoc.has-aside .content-container { max-width: 760px; }
+}
+@media (max-width: 639px) {
+  .VPDoc .vp-doc { font-size: min(var(--book-font-size), 19px); }
+  .vp-doc h1 { font-size: 1.65rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+}

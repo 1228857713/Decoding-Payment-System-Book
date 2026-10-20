@@ -1,0 +1,22 @@
+{
+  "name": "payment-system-book",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs",
+    "check": "node scripts/check-content.mjs --manifest-only",
+    "check:source": "node scripts/check-content.mjs",
+    "import:book": "node scripts/import-book.mjs"
+  },
+  "devDependencies": {
+    "image-size": "2.0.4",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.22"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
