@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "preview": "vitepress preview docs",
     "check": "node scripts/check-content.mjs --manifest-only",
     "check:source": "node scripts/check-content.mjs",

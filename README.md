@@ -19,6 +19,8 @@ npm run build
 
 GitHub Pages 通过仓库工作流自动部署，构建时使用 `SITE_BASE=/Decoding-Payment-System-Book/`。Cloudflare Pages 使用 `npm run build`、输出目录 `docs/.vitepress/dist`、`SITE_BASE=/`，不需要后端服务。
 
+若要本地准备独立的 Cloudflare 上传目录，运行 `npm run build:cloudflare`，输出为 `docs/.vitepress/dist-root/`。此命令固定使用根路径，不会覆盖 GitHub Pages 的子路径构建。
+
 ---
 
 以下保留原仓库说明：

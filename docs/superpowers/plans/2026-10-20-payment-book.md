@@ -22,23 +22,23 @@
 
 **Files:** `package.json`、`docs/.vitepress/config.ts`、`docs/index.md`、`docs/contents.md`、`docs/about.md`、`scripts/check-content.mjs`。
 
-- [ ] 以 `book-data.json` 的 22 单元生成有序目录，配置中文本地搜索。
-- [ ] 配置纯静态构建和 base 环境变量，明确署名与版权联系方式。
-- [ ] 运行内容完整性校验和两种 base 的生产构建。
+- [x] 以 `book-data.json` 的 22 单元生成有序目录，配置中文本地搜索。
+- [x] 配置纯静态构建和 base 环境变量，明确署名与版权联系方式。
+- [x] 运行内容完整性校验和两种 base 的生产构建。
 
 ### Task 2: 阅读交互
 
 **Files:** `docs/.vitepress/theme/index.ts`、`style.css`、`components/ImageViewer.vue`、`components/ReaderTools.vue`。
 
-- [ ] 实现原图可访问对话框与原图链接。
-- [ ] 实现字号和浏览器本地继续阅读。
-- [ ] 浏览器验证中文搜索、放大/退出、阅读偏好及 320/768/1024/1440 视口。
+- [x] 实现原图可访问对话框与原图链接。
+- [x] 实现字号和浏览器本地继续阅读。
+- [x] 浏览器验证中文搜索、放大/退出、阅读偏好及 320/768/1024/1440 视口。
 
 ### Task 3: 发布
 
 **Files:** `.github/workflows/deploy.yml`、`README.md`、`.gitignore`。
 
-- [ ] 在原 README 前添加网站入口与整理说明，保留下方全文。
-- [ ] 建立 Node 24 的 Pages 构建部署工作流，提交并 SSH 推送至现有 main。
-- [ ] 等待工作流完成，打开真实 Pages URL 验证图片与搜索。
-- [ ] 为 Cloudflare 留下根路径产物与准确构建参数，并报告登录状态。
+- [x] 在原 README 前添加网站入口与整理说明，保留下方全文。
+- [x] 建立 Node 24 的 Pages 构建部署工作流，提交并 SSH 推送至现有 main。
+- [x] 等待工作流完成，打开真实 Pages URL 验证图片与搜索。
+- [x] 为 Cloudflare 留下根路径产物与准确构建参数，并报告登录状态。
