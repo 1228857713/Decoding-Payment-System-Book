@@ -4,37 +4,21 @@ prev: false
 next: false
 ---
 
+<script setup>
+import { withBase } from 'vitepress'
+import { data as chapters } from './contents.data.js'
+</script>
+
 # 全书目录
 
 《图解支付系统设计与实现》 · 隐墨星辰著 · V_0.1.0
 
 按原书顺序阅读，也可以用顶部搜索直接查找术语与主题。图示可点击放大。
 
-## 正文
+<ul class="book-contents">
+  <li v-for="chapter in chapters" :key="chapter.link">
+    <a :href="withBase(chapter.link)">{{ chapter.title }}</a>
+  </li>
+</ul>
 
-- [封面与序言](/book/ch00)
-- [第1章 在线支付系统基本概念](/book/ch01)
-- [第2章 在线支付系统概要设计](/book/ch02)
-- [第3章 核心业务简介](/book/ch03)
-- [第4章 收单结算](/book/ch04)
-- [第5章 收银支付](/book/ch05)
-- [第6章 渠道网关](/book/ch06)
-- [第7章 账务系统](/book/ch07)
-- [第8章 会员与卡中心](/book/ch08)
-- [第9章 商户服务](/book/ch09)
-- [第10章 资金产品](/book/ch10)
-- [第11章 支付安全](/book/ch11)
-- [第12章 技术风险与资损防控](/book/ch12)
-- [第13章 业务ID生成规则](/book/ch13)
-- [第14章 状态机设计思想在支付系统中的广泛应用](/book/ch14)
-- [第15章 渠道开关及渠道路由](/book/ch15)
-- [第16章 支付系统日志设计](/book/ch16)
-- [第17章 分布式支付系统的幂等性原理与实践](/book/ch17)
-- [第18章 分布式流控](/book/ch18)
-- [第19章 一些重要的小点](/book/ch19)
-
-## 补充内容
-
-- [附录](/book/ch20)
-- [后记](/book/ch21)
 - [来源、版权与勘误](/about)

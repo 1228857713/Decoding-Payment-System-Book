@@ -34,7 +34,18 @@ let restoring = false
 
 function isChapterPath(value: string) {
   const prefix = withBase('/book/')
-  return value.startsWith(prefix) && /^ch\d+(?:\.html)?\/?$/.test(value.slice(prefix.length))
+  if (!value.startsWith(prefix)) return false
+  // Strip the raw trailing slash and .html suffix before decoding, so encoded
+  // traversal like %2e%2e or %2F collapses into characters the check below rejects.
+  let segment: string
+  try {
+    segment = decodeURIComponent(value.slice(prefix.length).replace(/\/$/, '').replace(/\.html$/, ''))
+  } catch {
+    return false
+  }
+  if (segment === '.' || segment === '..') return false
+  // Exactly one non-empty segment: no separators, query, hash, whitespace, or control characters.
+  return /^[^\s\\/?#\u0000-\u001f\u007f-\u009f]+$/.test(segment)
 }
 
 function samePage(first: string, second: string) {

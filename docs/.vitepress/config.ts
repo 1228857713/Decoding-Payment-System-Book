@@ -2,8 +2,9 @@ import { defineConfig } from 'vitepress'
 import { readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { imageSize } from 'image-size'
+import { loadBookPages } from '../../scripts/book-content.mjs'
 
-const chapters = JSON.parse(readFileSync(new URL('./book-data.json', import.meta.url), 'utf8'))
+const chapters = loadBookPages()
 const repository = 'https://github.com/1228857713/Decoding-Payment-System-Book'
 const base = process.env.SITE_BASE || '/'
 
@@ -27,8 +28,9 @@ export default defineConfig({
       md.renderer.rules.image = (tokens, index, options, env, self) => {
         const token = tokens[index]
         const source = token.attrGet('src') || ''
-        if (source.startsWith('./assets/') && env.path) {
-          const dimensions = imageSize(readFileSync(resolve(dirname(env.path), source)))
+        const decodedPath = decodeURIComponent(source.split(/[?#]/, 1)[0])
+        if (decodedPath.startsWith('./assets/') && env.path) {
+          const dimensions = imageSize(readFileSync(resolve(dirname(env.path), decodedPath)))
           if (dimensions.width && dimensions.height) {
             token.attrSet('width', String(dimensions.width))
             token.attrSet('height', String(dimensions.height))

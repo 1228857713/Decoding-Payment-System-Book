@@ -5,15 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "build": "node scripts/build-site.mjs",
+    "build:pages": "node scripts/build-site.mjs pages",
+    "build:cloudflare": "node scripts/build-site.mjs cloudflare",
     "preview": "vitepress preview docs",
-    "check": "node scripts/check-content.mjs --manifest-only",
-    "check:source": "node scripts/check-content.mjs",
-    "import:book": "node scripts/import-book.mjs"
+    "check": "node scripts/check-content.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "clean": "node scripts/clean.mjs"
   },
   "devDependencies": {
+    "gray-matter": "4.0.3",
     "image-size": "2.0.4",
+    "markdown-it": "15.0.3",
     "vitepress": "1.6.4",
     "vue": "^3.5.22"
   },
