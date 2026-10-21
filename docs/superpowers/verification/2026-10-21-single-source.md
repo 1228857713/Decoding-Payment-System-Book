@@ -21,4 +21,7 @@
 
 ## 线上发布
 
-真实 main 推送和 GitHub Actions 发布结果在发布完成后补充。
+- 实现提交 `0455466a3a9bdf0bc49e1087897230432e703421` 正常快进到 main 并推送成功。
+- [GitHub Actions 实际发布记录](https://github.com/1228857713/Decoding-Payment-System-Book/actions/runs/39560445412)：build / deploy 均成功；Linux 全新检出后安装、测试、内容校验与构建通过，2026-10-21 07:14:07 UTC 完成部署。
+- [正式网站](https://1228857713.github.io/Decoding-Payment-System-Book/) 发布后，用隔离浏览器重复核对 22 项目录/侧栏、中文搜索、第五章图片、四种屏幕宽度、图片键盘操作、字号与继续阅读，全部通过，无页面脚本错误。
+- Cloudflare 根路径构建已经验证；本轮没有绑定或发布 Cloudflare 账号站点。
